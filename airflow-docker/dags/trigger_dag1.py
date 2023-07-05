@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 from datetime import datetime
 
-with DAG(dag_id='trigger_dag_exemplo',
+with DAG(dag_id='trigger_task_exemplo',
          description='Minha nova DAG',
          schedule_interval=None,
          start_date=datetime(year=2023, month=5, day=6),
