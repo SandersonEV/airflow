@@ -11,9 +11,7 @@ dag = DAG(dag_id='primeira_dag_exemplo',
           )
 
 task1 = BashOperator(task_id='task_d_1', bash_command='sleep 5', dag=dag)
-
 task2 = BashOperator(task_id='task_d_2', bash_command='echo "oi task 2" ', dag=dag)
-
 task3 = BashOperator(task_id='task_d_3', bash_command='echo "oi task 3"', dag=dag)
 
 task1 >> task2 >> task3  # Executes one task after other

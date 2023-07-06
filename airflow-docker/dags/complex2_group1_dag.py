@@ -12,15 +12,10 @@ with DAG(dag_id='complex2_group1_dag',
          ) as dag:
 
     task1 = BashOperator(task_id='task_1', bash_command='sleep 2')
-
     task2 = BashOperator(task_id='task_2', bash_command='sleep 2')
-
     task3 = BashOperator(task_id='task_3', bash_command='sleep 2')
-
     task4 = BashOperator(task_id='task_4', bash_command='sleep 2')
-
     task5 = BashOperator(task_id='task_5', bash_command='sleep 2')
-
     task6 = BashOperator(task_id='task_6', bash_command='sleep 2')
 
     task_group = TaskGroup(group_id='task_group', dag=dag)
